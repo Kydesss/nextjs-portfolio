@@ -40,19 +40,22 @@ export default async function ProjectPage({ params }: PageProps) {
                     </h1>
 
                     {project.projectImage && (
-                        <Image
-                            src={getWixImageUrl(project.projectImage)}
-                            alt=""
-                            width={1920}
-                            height={1080}
-                            style={{
-                                maxWidth: "100%",
-                                height: "auto",
-                                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-                                borderRadius: "8px",
-                                border: "2px solid #333",
-                            }}
-                        ></Image> // add alt text field in CMS
+                        <div className="mb-6">
+                            <Image
+                                src={getWixImageUrl(project.projectImage)}
+                                alt=""
+                                width={1920}
+                                height={1080}
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto",
+                                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
+                                    borderRadius: "8px",
+                                    border: "2px solid #333",
+                                }}
+                            ></Image>{" "}
+                        </div>
+                        // add alt text field in CMS
                     )}
 
                     {project.youtubeVideoEmbed && (

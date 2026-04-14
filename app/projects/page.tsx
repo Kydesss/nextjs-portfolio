@@ -7,7 +7,6 @@ import Image from "next/image";
 import { getWixImageUrl } from "@/app/utils/wixImageUrl";
 
 export default function ProjectsPage() {
-    // const data = await fetchProjectData();
     const [data, setData] = useState<Project[]>([]);
     const [selectedCategory, setSelectedCategory] = useState<string>("All");
     const [showMore, setShowMore] = useState(false);
@@ -102,30 +101,6 @@ export default function ProjectsPage() {
                                     allowFullScreen
                                     className="rounded-lg"
                                 ></iframe>
-                                {/* YouTube-style overlay */}
-                                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                                    <div className="absolute bottom-3 left-3 right-3">
-                                        <div className="flex items-center gap-2 text-white">
-                                            <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                                <svg
-                                                    className="w-4 h-4 ml-0.5"
-                                                    fill="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                >
-                                                    <path d="M8 5v14l11-7z" />
-                                                </svg>
-                                            </div>
-                                            <div className="flex-1 min-w-0">
-                                                <p className="text-sm font-medium truncate">
-                                                    {item.projectName}
-                                                </p>
-                                                <p className="text-xs text-gray-300">
-                                                    YouTube
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> */}
                             </div>
                         </div>
                     </div>
