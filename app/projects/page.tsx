@@ -120,6 +120,17 @@ export default function ProjectsPage() {
                             <p>{item.description}</p>
                         </span>
                     </div>
+                    <div className="flex flex-wrap mb-6">
+                        {item.tags &&
+                            item.tags.map((tag: string, index: number) => (
+                                <span
+                                    key={index}
+                                    className="inline-block dark:bg-green-500/30 bg-green-400/90 px-3 py-1.5 text-xs font-medium dark:text-green-500 mr-2 mb-2 rounded-full"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                    </div>
                     <Link key={item._id} href={`/projects/${item.slug}`}>
                         <button className="bg-gray-800/30 hover:bg-gray-700 border-gray-600 border-2 text-white px-6 py-3 rounded-lg font-medium transition-colors">
                             See Project

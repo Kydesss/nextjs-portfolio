@@ -77,7 +77,7 @@ export default async function ProjectPage({ params }: PageProps) {
                         </div>
                     )}
 
-                    <div className="ulist dark:text-white">
+                    <div className="ulist dark:text-white mb-2">
                         {project.bulletPoints && (
                             <RichContentViewer
                                 content={project.bulletPoints}
@@ -85,7 +85,19 @@ export default async function ProjectPage({ params }: PageProps) {
                         )}
                     </div>
 
-                    <div className="flex flex-wrap gap-4 my-8">
+                    <div className="flex flex-wrap">
+                        {project.tags &&
+                            project.tags.map((tag: string, index: number) => (
+                                <span
+                                    key={index}
+                                    className="inline-block dark:bg-green-500/30 bg-green-400/90 px-3 py-1.5 text-xs font-medium dark:text-green-500 mr-2 mb-2 rounded-full"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-4 my-6">
                         {project.githubRepositoryLink && (
                             <a
                                 href={project.githubRepositoryLink}
