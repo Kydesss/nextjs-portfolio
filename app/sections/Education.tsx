@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import RichContentViewer from "../components/RichContentViewer";
 import { fetchEducationData } from "../api/wix-api";
 import Education from "../models/Education";
+import { getWixImageUrl } from "../utils/wixImageUrl";
 
 export default function EducationList() {
     const [data, setData] = useState<Education[] | null>(null);
@@ -30,8 +31,7 @@ export default function EducationList() {
         return <div>No education data found</div>;
     }
     return (
-        <>
-            <section id="education" className="space-y-6 mb-12">
+        <section id="education" className="space-y-6 mb-12">
                 <h2 className="text-3xl font-bold mb-6 dark:text-gray-100">
                     Education
                 </h2>
@@ -44,7 +44,7 @@ export default function EducationList() {
                             <div
                                 className="bg-white rounded-full p-2 mr-4 w-24 h-24 shrink-0 flex items-center justify-center overflow-hidden border-gray-800"
                                 style={{
-                                    backgroundImage: `url(${item.instituteLogo})`,
+                                    backgroundImage: `url(${getWixImageUrl(item.instituteLogo ?? "")})`,
                                     backgroundSize: "85%",
                                     backgroundPosition: "center",
                                     backgroundRepeat: "no-repeat",
@@ -71,7 +71,6 @@ export default function EducationList() {
                         </div>
                     </div>
                 ))}
-            </section>
-        </>
+        </section>
     );
 }
