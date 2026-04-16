@@ -12,6 +12,7 @@ interface ProjectQueryResultData {
     imageHeight?: number;
     category?: string;
     slug?: string;
+    date?: string;
 }
 
 class Project implements ProjectQueryResultData {
@@ -28,6 +29,7 @@ class Project implements ProjectQueryResultData {
     imageHeight?: number;
     category?: string;
     slug?: string;
+    date?: string;
 
     constructor(data: ProjectQueryResultData) {
         this._id = data._id;
@@ -43,6 +45,7 @@ class Project implements ProjectQueryResultData {
         this.imageHeight = data.imageHeight;
         this.category = data.category;
         this.slug = data.slug;
+        this.date = data.date;
     }
 }
 

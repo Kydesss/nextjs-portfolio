@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import RichContentViewer from "@/app/components/RichContentViewer";
-import Image from "next/image";
+import FeaturedImage from "@/app/components/FeaturedImage";
 import { getWixImageUrl } from "@/app/utils/wixImageUrl";
 
 interface PageProps {
@@ -40,22 +40,14 @@ export default async function ProjectPage({ params }: PageProps) {
                     </h1>
 
                     {project.projectImage && (
-                        <div className="mb-6">
-                            <Image
-                                src={getWixImageUrl(project.projectImage)}
-                                alt=""
-                                width={1920}
-                                height={1080}
-                                style={{
-                                    maxWidth: "100%",
-                                    height: "auto",
-                                    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
-                                    borderRadius: "8px",
-                                    border: "2px solid #333",
-                                }}
-                            ></Image>{" "}
-                        </div>
-                        // add alt text field in CMS
+                        <FeaturedImage
+                            src={getWixImageUrl(project.projectImage)}
+                            alt={
+                                project.projectName || "Project featured image"
+                            }
+                            width={project.imageWidth}
+                            height={project.imageHeight}
+                        />
                     )}
 
                     {project.youtubeVideoEmbed && (
