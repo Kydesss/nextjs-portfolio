@@ -12,14 +12,13 @@ interface PageProps {
 
 /* 1️⃣ Generate all static project URLs */
 export async function generateStaticParams() {
-    const data = await fetchProjectData();
-    console.log(
-        "Generated slugs:",
-        data.items.map((p: any) => p.slug),
-    );
-    return data.items.map((project: any) => ({
-        slug: project.slug,
-    }));
+    try {
+        const data = await fetchProjectData();
+        const items = Array.isArray(data) ? data : (data?.items ?? []);
+        return items.map((project: any) => ({ slug: project.slug }));
+    } catch {
+        return [];
+    }
 }
 
 /* 2️⃣ Render single project */

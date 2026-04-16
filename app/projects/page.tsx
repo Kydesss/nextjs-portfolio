@@ -33,9 +33,13 @@ export default function ProjectsPage() {
         };
         fetchData();
     }, []);
-    const categories = [
+    const categories: string[] = [
         "All",
-        ...new Set(data.map((project) => project.category)),
+        ...new Set(
+            data
+                .map((project) => project.category)
+                .filter((c): c is string => c !== undefined)
+        ),
     ];
     const filteredProjects =
         selectedCategory === "All"
