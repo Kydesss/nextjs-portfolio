@@ -16,9 +16,7 @@ export default function FeaturedImage({
     width = DEFAULT_WIDTH,
     height = DEFAULT_HEIGHT,
 }: FeaturedImageProps) {
-    const resolvedWidth = width || DEFAULT_WIDTH;
-    const resolvedHeight = height || DEFAULT_HEIGHT;
-    const aspectRatio = (resolvedHeight / resolvedWidth) * 100;
+    const aspectRatio = (height / width) * 100;
 
     return (
         <div className="mb-6 w-full max-w-[1200px] mx-auto overflow-hidden rounded-[1.25rem] border border-gray-200 bg-white/80 shadow-xl shadow-slate-300/20 dark:border-gray-700 dark:bg-slate-950/90 dark:shadow-black/20">

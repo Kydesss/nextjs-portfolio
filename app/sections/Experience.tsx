@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import RichContentViewer from "../components/RichContentViewer";
 import { fetchExperienceData } from "../api/wix-api";
 import Experience from "../models/Experience";
+import { getWixImageUrl } from "../utils/wixImageUrl";
 
 export default function ExperienceList() {
     const [data, setData] = useState<Experience[] | null>(null);
@@ -35,8 +36,7 @@ export default function ExperienceList() {
     const experiencePreview = showMore ? data : data.slice(0, 3);
 
     return (
-        <>
-            <section id="experience" className="mb-12 space-y-6">
+        <section id="experience" className="mb-12 space-y-6">
                 <h2 className="text-3xl font-bold mb-6 dark:text-gray-100">
                     Experience
                 </h2>
@@ -49,7 +49,7 @@ export default function ExperienceList() {
                             <div
                                 className="bg-white rounded-full p-2 mr-4 w-24 h-24 shrink-0 flex items-center justify-center overflow-hidden border-gray-800"
                                 style={{
-                                    backgroundImage: `url(${item.companyLogo})`,
+                                    backgroundImage: `url(${getWixImageUrl(item.companyLogo ?? "")})`,
                                     backgroundSize: "85%",
                                     backgroundPosition: "center",
                                     backgroundRepeat: "no-repeat",
@@ -101,7 +101,6 @@ export default function ExperienceList() {
                         </div>
                     )}
                 </div>
-            </section>
-        </>
+        </section>
     );
 }

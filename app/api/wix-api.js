@@ -24,7 +24,6 @@ export async function fetchEducationData() {
 
 export async function fetchProjectData() {
     const queryResults = await wixClient.items.query("Projects").find();
-    // console.log(queryResults);
     return queryResults;
 }
 
