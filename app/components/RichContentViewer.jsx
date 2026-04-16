@@ -6,6 +6,10 @@ import "@wix/ricos/css/all-plugins-viewer.css";
 const plugins = quickStartViewerPlugins();
 
 const RichContentViewer = ({ content }) => {
-    return <RicosViewer content={content} plugins={plugins} />;
+    return (
+        <div suppressHydrationWarning>
+            <RicosViewer content={content} plugins={plugins} />
+        </div>
+    );
 };
 export default RichContentViewer;
