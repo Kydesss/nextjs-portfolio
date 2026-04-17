@@ -41,7 +41,7 @@ export default function ProjectsPage() {
         ...new Set(
             data
                 .map((project) => project.category)
-                .filter((c): c is string => c !== undefined)
+                .filter((c): c is string => c !== undefined),
         ),
     ];
 
@@ -97,8 +97,13 @@ export default function ProjectsPage() {
                                     <div className="md:w-1/3 flex items-center justify-center">
                                         <div className="w-full max-w-xs bg-gray-100 dark:bg-stone-800/50 rounded-lg overflow-hidden flex items-center justify-center shadow-md border border-gray-200 dark:border-gray-700">
                                             <Image
-                                                src={getWixImageUrl(item.projectImage)}
-                                                alt={item.projectName ?? "Project image"}
+                                                src={getWixImageUrl(
+                                                    item.projectImage,
+                                                )}
+                                                alt={
+                                                    item.projectName ??
+                                                    "Project image"
+                                                }
                                                 width={item.imageWidth ?? 400}
                                                 height={item.imageHeight ?? 300}
                                                 style={{
@@ -111,22 +116,23 @@ export default function ProjectsPage() {
                                     </div>
                                 )}
 
-                                {item.youtubeVideoEmbed && (
-                                    <div className="md:w-1/3 flex items-center justify-center">
-                                        <div className="w-full aspect-video bg-gray-800 dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
-                                            <iframe
-                                                width="100%"
-                                                height="100%"
-                                                src={item.youtubeVideoEmbed}
-                                                title={item.projectName}
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                referrerPolicy="strict-origin-when-cross-origin"
-                                                allowFullScreen
-                                                className="rounded-lg"
-                                            />
+                                {item.youtubeVideoEmbed &&
+                                    !item.projectImage && (
+                                        <div className="md:w-1/3 flex items-center justify-center">
+                                            <div className="w-full aspect-video bg-gray-800 dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg border border-gray-300 dark:border-gray-700">
+                                                <iframe
+                                                    width="100%"
+                                                    height="100%"
+                                                    src={item.youtubeVideoEmbed}
+                                                    title={item.projectName}
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    referrerPolicy="strict-origin-when-cross-origin"
+                                                    allowFullScreen
+                                                    className="rounded-lg"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
-                                )}
+                                    )}
 
                                 <div className="md:w-2/3">
                                     <h3 className="text-2xl font-semibold mb-3 text-gray-900 dark:text-gray-100">
@@ -141,14 +147,16 @@ export default function ProjectsPage() {
                                         {item.description}
                                     </p>
                                     <div className="flex flex-wrap mb-6">
-                                        {item.tags?.map((tag: string, index: number) => (
-                                            <span
-                                                key={index}
-                                                className="inline-block bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 px-3 py-1.5 text-xs font-medium mr-2 mb-2 rounded-full border border-green-300 dark:border-green-700"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
+                                        {item.tags?.map(
+                                            (tag: string, index: number) => (
+                                                <span
+                                                    key={index}
+                                                    className="inline-block bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 px-3 py-1.5 text-xs font-medium mr-2 mb-2 rounded-full border border-green-300 dark:border-green-700"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ),
+                                        )}
                                     </div>
                                     <Link href={`/projects/${item.slug}`}>
                                         <button className="bg-gray-800 dark:bg-purple-600 hover:bg-gray-900 dark:hover:bg-purple-700 border border-gray-700 dark:border-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
