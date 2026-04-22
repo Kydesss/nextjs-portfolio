@@ -5,6 +5,7 @@ import Project from "../models/Project";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { getWixImageUrl } from "@/app/utils/wixImageUrl";
+import { ProjectItemSkeleton } from "../components/Skeleton";
 
 const PROJECTS_PREVIEW_COUNT = 3;
 
@@ -85,7 +86,18 @@ export default function ProjectsPage() {
             {/* Project list */}
             <div className="space-y-6">
                 {isLoading ? (
-                    <div>Loading...</div>
+                    <div
+                        className="space-y-6 animate-pulse motion-reduce:animate-none"
+                        aria-busy="true"
+                        aria-live="polite"
+                    >
+                        {Array.from({ length: PROJECTS_PREVIEW_COUNT }).map(
+                            (_, i) => (
+                                <ProjectItemSkeleton key={i} />
+                            ),
+                        )}
+                        <span className="sr-only">Loading projects…</span>
+                    </div>
                 ) : (
                     projectsToShow.map((item) => (
                         <div
