@@ -95,7 +95,7 @@ export default async function ProjectPage({ params }: PageProps) {
                                 href={project.liveDemo}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 dark:bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors duration-200 shadow-md hover:shadow-lg"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white rounded-lg font-semibold transition-colors duration-200 shadow-md hover:shadow-lg"
                             >
                                 <span>🚀</span>
                                 Live Demo
