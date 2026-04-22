@@ -93,7 +93,7 @@ export default function ExperienceList() {
                     {data.length > 3 && (
                         <div className="flex justify-center mt-8">
                             <button
-                                className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded transition-colors duration-200"
+                                className="px-6 py-2 bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white rounded-lg font-medium transition-colors duration-200 shadow-md hover:shadow-lg"
                                 onClick={() => setShowMore((s) => !s)}
                             >
                                 {showMore

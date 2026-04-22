@@ -151,7 +151,7 @@ export default function ProjectsPage() {
                                         {item.projectName}
                                     </h3>
                                     <div className="mb-4">
-                                        <span className="inline-block bg-blue-600 dark:bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                        <span className="inline-block bg-gray-800 text-white dark:bg-stone-700/50 dark:text-gray-200 px-3 py-1 rounded-full text-sm font-medium">
                                             {item.category}
                                         </span>
                                     </div>
@@ -163,7 +163,7 @@ export default function ProjectsPage() {
                                             (tag: string, index: number) => (
                                                 <span
                                                     key={index}
-                                                    className="inline-block bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200 px-3 py-1.5 text-xs font-medium mr-2 mb-2 rounded-full border border-green-300 dark:border-green-700"
+                                                    className="inline-block dark:bg-green-500/30 bg-green-400/90 px-3 py-1.5 text-xs font-medium dark:text-green-500 mr-2 mb-2 rounded-full"
                                                 >
                                                     {tag}
                                                 </span>
@@ -171,7 +171,7 @@ export default function ProjectsPage() {
                                         )}
                                     </div>
                                     <Link href={`/projects/${item.slug}`}>
-                                        <button className="bg-gray-800 dark:bg-purple-600 hover:bg-gray-900 dark:hover:bg-purple-700 border border-gray-700 dark:border-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                                        <button className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-600 dark:hover:bg-emerald-500 border border-emerald-700 dark:border-emerald-500/50 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg">
                                             See Project
                                         </button>
                                     </Link>
@@ -186,7 +186,7 @@ export default function ProjectsPage() {
                 <div className="text-center mt-8">
                     <button
                         onClick={() => setShowMore(!showMore)}
-                        className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg"
+                        className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg"
                     >
                         {showMore
                             ? "Show Less"
