@@ -4,6 +4,7 @@ import RichContentViewer from "../components/RichContentViewer";
 import { fetchExperienceData } from "../api/wix-api";
 import Experience from "../models/Experience";
 import { getWixImageUrl } from "../utils/wixImageUrl";
+import { SectionSkeleton } from "../components/Skeleton";
 
 export default function ExperienceList() {
     const [data, setData] = useState<Experience[] | null>(null);
@@ -28,7 +29,8 @@ export default function ExperienceList() {
         fetchData();
     }, []);
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading)
+        return <SectionSkeleton variant="timeline" title="Experience" count={3} />;
     if (!data || data.length === 0) {
         return <div>No experience data found</div>;
     }

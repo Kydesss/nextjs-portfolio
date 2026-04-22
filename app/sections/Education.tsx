@@ -4,6 +4,7 @@ import RichContentViewer from "../components/RichContentViewer";
 import { fetchEducationData } from "../api/wix-api";
 import Education from "../models/Education";
 import { getWixImageUrl } from "../utils/wixImageUrl";
+import { SectionSkeleton } from "../components/Skeleton";
 
 export default function EducationList() {
     const [data, setData] = useState<Education[] | null>(null);
@@ -26,7 +27,8 @@ export default function EducationList() {
         fetchData();
     }, []);
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading)
+        return <SectionSkeleton variant="timeline" title="Education" count={2} />;
     if (!data || data.length === 0) {
         return <div>No education data found</div>;
     }
