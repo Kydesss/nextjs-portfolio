@@ -37,7 +37,9 @@ export default async function ProjectPage({ params }: PageProps) {
                     {project.projectImage && (
                         <FeaturedImage
                             src={getWixImageUrl(project.projectImage)}
-                            alt={project.projectName ?? "Project featured image"}
+                            alt={
+                                project.projectName ?? "Project featured image"
+                            }
                             width={project.imageWidth}
                             height={project.imageHeight}
                         />
@@ -54,14 +56,16 @@ export default async function ProjectPage({ params }: PageProps) {
                                 referrerPolicy="strict-origin-when-cross-origin"
                                 allowFullScreen
                                 className="rounded-lg border-2 border-gray-700"
-                                style={{ boxShadow: "0 4px 12px rgba(0,0,0,0.3)" }}
+                                style={{
+                                    boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+                                }}
                             />
                         </div>
                     )}
 
                     <div className="ulist dark:text-white mb-2">
-                        {project.bulletPoints && (
-                            <RichContentViewer content={project.bulletPoints} />
+                        {project.description && (
+                            <RichContentViewer content={project.description} />
                         )}
                     </div>
 
