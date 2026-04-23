@@ -63,9 +63,6 @@ export default async function ProjectPage({ params }: PageProps) {
                         {project.description && (
                             <RichContentViewer content={project.description} />
                         )}
-                        {project.bulletPoints && (
-                            <RichContentViewer content={project.bulletPoints} />
-                        )}
                     </div>
 
                     <div className="flex flex-wrap">
