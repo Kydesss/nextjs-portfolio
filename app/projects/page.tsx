@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { getWixImageUrl } from "@/app/utils/wixImageUrl";
 import { ProjectItemSkeleton } from "../components/Skeleton";
+import RichContentViewer from "../components/RichContentViewer";
 
 const PROJECTS_PREVIEW_COUNT = 3;
 
@@ -155,9 +156,13 @@ export default function ProjectsPage() {
                                             {item.category}
                                         </span>
                                     </div>
-                                    <p className="text-gray-700 dark:text-gray-300 mb-4">
-                                        {item.description}
-                                    </p>
+                                    <div className="ulist dark:text-white mb-4">
+                                        {item.description && (
+                                            <RichContentViewer
+                                                content={item.description}
+                                            />
+                                        )}
+                                    </div>
                                     <div className="flex flex-wrap mb-6">
                                         {item.tags?.map(
                                             (tag: string, index: number) => (

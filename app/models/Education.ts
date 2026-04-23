@@ -1,3 +1,4 @@
+import type { RichContent } from "@wix/ricos";
 import { MONTHS, getDurationStr } from "../utils/dateUtils";
 
 class Education {
@@ -8,7 +9,7 @@ class Education {
     startDate?: string;
     endDate?: string;
     instituteLogo?: string;
-    richcontent?: string;
+    richcontent?: RichContent;
 
     constructor(data: Record<string, unknown>) {
         Object.assign(this, data);
