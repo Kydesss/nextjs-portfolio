@@ -157,9 +157,9 @@ export default function ProjectsPage() {
                                         </span>
                                     </div>
                                     <div className="ulist dark:text-white mb-4">
-                                        {item.description && (
+                                        {item.bulletPoints && (
                                             <RichContentViewer
-                                                content={item.description}
+                                                content={item.bulletPoints}
                                             />
                                         )}
                                     </div>

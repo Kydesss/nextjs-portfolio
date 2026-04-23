@@ -60,8 +60,8 @@ export default async function ProjectPage({ params }: PageProps) {
                     )}
 
                     <div className="ulist dark:text-white mb-2">
-                        {project.bulletPoints && (
-                            <RichContentViewer content={project.bulletPoints} />
+                        {project.description && (
+                            <RichContentViewer content={project.description} />
                         )}
                     </div>
 
