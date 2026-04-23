@@ -1,11 +1,13 @@
+import type { RichContent } from "@wix/ricos";
+
 class Project {
     _id?: string;
     projectName?: string;
-    description?: string;
+    description?: RichContent;
     youtubeVideoEmbed?: string;
     githubRepositoryLink?: string;
     liveDemo?: string;
-    bulletPoints?: string;
+    bulletPoints?: RichContent;
     tags?: string[];
     projectImage?: string;
     imageWidth?: number;

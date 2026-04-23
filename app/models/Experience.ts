@@ -1,3 +1,4 @@
+import type { RichContent } from "@wix/ricos";
 import { MONTHS, getDurationStr } from "../utils/dateUtils";
 
 class Experience {
@@ -9,7 +10,7 @@ class Experience {
     isCurrent?: boolean;
     startDate?: string;
     endDate?: string;
-    details?: string;
+    details?: RichContent;
     tags?: string[];
 
     constructor(data: Record<string, unknown>) {
