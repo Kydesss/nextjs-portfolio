@@ -24,6 +24,14 @@
         color: var(--color-gray-300);
     }
 
+    .ulist h1 span {
+        color: var(--color-white);
+    }
+
+    .ulist h2 span {
+        color: var(--color-white);
+    }
+
     .ulist a span {
         color: var(--color-blue-500);
     }
