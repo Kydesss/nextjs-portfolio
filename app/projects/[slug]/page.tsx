@@ -12,8 +12,7 @@ interface PageProps {
 
 export async function generateStaticParams() {
     try {
-        const data = await fetchProjectData();
-        const items = Array.isArray(data) ? data : (data?.items ?? []);
+        const items = await fetchProjectData();
         return items.map((project: any) => ({ slug: project.slug }));
     } catch {
         return [];
