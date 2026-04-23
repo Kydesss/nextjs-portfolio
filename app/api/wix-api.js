@@ -12,19 +12,19 @@ const wixClient = createClient({
 
 export async function fetchExperienceData() {
     const queryResults = await wixClient.items.query("WorkExperience").find();
-    return queryResults;
+    return queryResults.items;
 }
 
 export async function fetchEducationData() {
     const queryResults = await wixClient.items
         .query("EducationCollection")
         .find();
-    return queryResults;
+    return queryResults.items;
 }
 
 export async function fetchProjectData() {
     const queryResults = await wixClient.items.query("Projects").find();
-    return queryResults;
+    return queryResults.items;
 }
 
 export async function fetchProjectBySlug(slug) {
