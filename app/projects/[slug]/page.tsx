@@ -68,17 +68,18 @@ export default async function ProjectPage({ params }: PageProps) {
                             <RichContentViewer content={project.description} />
                         )}
                     </div>
-
-                    <div className="flex flex-wrap">
-                        {project.tags?.map((tag: string, index: number) => (
-                            <span
-                                key={index}
-                                className="inline-block dark:bg-green-500/30 bg-green-400/90 px-3 py-1.5 text-xs font-medium dark:text-green-500 mr-2 mb-2 rounded-full"
-                            >
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
+                    {project.tags && (
+                        <div className="flex flex-wrap">
+                            {project.tags?.map((tag: string, index: number) => (
+                                <span
+                                    key={index}
+                                    className="inline-block dark:bg-green-500/30 bg-green-400/90 px-3 py-1.5 text-xs font-medium dark:text-green-500 mr-2 mb-2 rounded-full"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    )}
 
                     <div className="flex flex-wrap gap-4 my-6">
                         {project.githubRepositoryLink && (

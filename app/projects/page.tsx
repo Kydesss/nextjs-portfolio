@@ -163,18 +163,23 @@ export default function ProjectsPage() {
                                             />
                                         )}
                                     </div>
-                                    <div className="flex flex-wrap mb-6">
-                                        {item.tags?.map(
-                                            (tag: string, index: number) => (
-                                                <span
-                                                    key={index}
-                                                    className="inline-block dark:bg-green-500/30 bg-green-400/90 px-3 py-1.5 text-xs font-medium dark:text-green-500 mr-2 mb-2 rounded-full"
-                                                >
-                                                    {tag}
-                                                </span>
-                                            ),
-                                        )}
-                                    </div>
+                                    {item.tags && (
+                                        <div className="flex flex-wrap mb-6">
+                                            {item.tags?.map(
+                                                (
+                                                    tag: string,
+                                                    index: number,
+                                                ) => (
+                                                    <span
+                                                        key={index}
+                                                        className="inline-block dark:bg-green-500/30 bg-green-400/90 px-3 py-1.5 text-xs font-medium dark:text-green-500 mr-2 mb-2 rounded-full"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ),
+                                            )}
+                                        </div>
+                                    )}
                                     <Link href={`/projects/${item.slug}`}>
                                         <button className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-600 dark:hover:bg-emerald-500 border border-emerald-700 dark:border-emerald-500/50 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-md hover:shadow-lg">
                                             See Project
