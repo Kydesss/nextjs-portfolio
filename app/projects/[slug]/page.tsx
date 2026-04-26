@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import RichContentViewer from "@/app/components/RichContentViewer";
 import FeaturedImage from "@/app/components/FeaturedImage";
 import { getWixImageUrl } from "@/app/utils/wixImageUrl";
+import BackToTop from "@/app/components/BackToTop";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -103,6 +104,7 @@ export default async function ProjectPage({ params }: PageProps) {
                     </div>
                 </div>
             </div>
+            <BackToTop />
         </>
     );
 }
