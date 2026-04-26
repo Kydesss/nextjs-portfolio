@@ -24,11 +24,9 @@
         color: var(--color-gray-300);
     }
 
-    .ulist h1 span {
-        color: var(--color-white);
-    }
-
-    .ulist h2 span {
+    .ulist h1 span,
+    .ulist h2 span,
+    .ulist h3 span {
         color: var(--color-white);
     }
 
