@@ -1,30 +1,77 @@
-import { fetchProjectBySlug, fetchProjectData } from "../../api/wix-api";
-import { notFound } from "next/navigation";
-import Link from "next/link";
+"use client";
+
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import { fetchProjectBySlug } from "../../api/wix-api";
 import Navbar from "@/app/components/Navbar";
 import RichContentViewer from "@/app/components/RichContentViewer";
 import FeaturedImage from "@/app/components/FeaturedImage";
 import { getWixImageUrl } from "@/app/utils/wixImageUrl";
 import BackToTop from "@/app/components/BackToTop";
+import Project from "@/app/models/Project";
 
-interface PageProps {
-    params: Promise<{ slug: string }>;
-}
+export default function ProjectPage() {
+    const { slug } = useParams<{ slug: string }>();
+    const [project, setProject] = useState<Project | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [notFound, setNotFound] = useState(false);
 
-export async function generateStaticParams() {
-    try {
-        const items = await fetchProjectData();
-        return items.map((project: any) => ({ slug: project.slug }));
-    } catch {
-        return [];
+    useEffect(() => {
+        if (!slug) return;
+        const fetchData = async () => {
+            try {
+                const result = await fetchProjectBySlug(slug);
+                if (!result) {
+                    setNotFound(true);
+                } else {
+                    setProject(new Project(result));
+                }
+            } catch (error) {
+                console.error("Error fetching project:", error);
+                setNotFound(true);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+        fetchData();
+    }, [slug]);
+
+    if (isLoading) {
+        return (
+            <>
+                <Navbar />
+                <div className="flex h-auto container mx-auto justify-center">
+                    <div className="flex flex-col my-5 px-2 w-full max-w-3xl animate-pulse motion-reduce:animate-none">
+                        <div className="h-10 bg-gray-200 dark:bg-stone-800/70 rounded w-2/3 mb-6" />
+                        <div className="w-full aspect-video bg-gray-200 dark:bg-stone-800/70 rounded-lg mb-6" />
+                        <div className="space-y-3">
+                            <div className="h-4 bg-gray-200 dark:bg-stone-800/70 rounded w-full" />
+                            <div className="h-4 bg-gray-200 dark:bg-stone-800/70 rounded w-11/12" />
+                            <div className="h-4 bg-gray-200 dark:bg-stone-800/70 rounded w-4/5" />
+                        </div>
+                    </div>
+                </div>
+            </>
+        );
     }
-}
 
-export default async function ProjectPage({ params }: PageProps) {
-    const { slug } = await params;
-    const project = await fetchProjectBySlug(slug);
-
-    if (!project) notFound();
+    if (notFound || !project) {
+        return (
+            <>
+                <Navbar />
+                <div className="flex h-auto container mx-auto justify-center">
+                    <div className="flex flex-col my-5 px-2 text-center">
+                        <h1 className="dark:text-white text-4xl font-bold mb-4">
+                            Project not found
+                        </h1>
+                        <p className="dark:text-gray-400 text-gray-600">
+                            This project doesn&apos;t exist or couldn&apos;t be loaded.
+                        </p>
+                    </div>
+                </div>
+            </>
+        );
+    }
 
     return (
         <>
