@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "wix@claude-plugins-official": true,
+    "impeccable@impeccable": true
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-02T00:00:00.000Z",
+  "title": "Design System: Joaquin Pacia Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(18% 0.005 250)",
+        "tonalRamp": ["oklch(8% 0.005 250)", "oklch(12% 0.005 250)", "oklch(18% 0.005 250)", "oklch(26% 0.005 250)", "oklch(38% 0.005 250)", "oklch(54% 0.005 250)", "oklch(72% 0.005 250)", "oklch(92% 0.005 250)"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(99% 0.003 80)",
+        "tonalRamp": ["oklch(15% 0.003 80)", "oklch(22% 0.003 80)", "oklch(35% 0.003 80)", "oklch(50% 0.003 80)", "oklch(65% 0.003 80)", "oklch(80% 0.003 80)", "oklch(92% 0.003 80)", "oklch(99% 0.003 80)"]
+      },
+      "graphite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(22% 0.005 250)",
+        "tonalRamp": ["oklch(10% 0.005 250)", "oklch(16% 0.005 250)", "oklch(22% 0.005 250)", "oklch(32% 0.005 250)", "oklch(45% 0.005 250)", "oklch(60% 0.005 250)", "oklch(76% 0.005 250)", "oklch(92% 0.005 250)"]
+      },
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "oklch(94% 0.005 80)",
+        "tonalRamp": ["oklch(20% 0.005 80)", "oklch(32% 0.005 80)", "oklch(45% 0.005 80)", "oklch(58% 0.005 80)", "oklch(70% 0.005 80)", "oklch(82% 0.005 80)", "oklch(94% 0.005 80)", "oklch(98% 0.005 80)"]
+      },
+      "accent-emerald": {
+        "role": "primary",
+        "displayName": "Verdant Action",
+        "canonical": "oklch(62% 0.16 152)",
+        "tonalRamp": ["oklch(20% 0.06 152)", "oklch(32% 0.10 152)", "oklch(44% 0.14 152)", "oklch(54% 0.16 152)", "oklch(62% 0.16 152)", "oklch(72% 0.14 152)", "oklch(84% 0.10 152)", "oklch(94% 0.04 152)"]
+      },
+      "accent-emerald-deep": {
+        "role": "primary",
+        "displayName": "Verdant Action Deep",
+        "canonical": "oklch(54% 0.14 152)",
+        "tonalRamp": ["oklch(18% 0.06 152)", "oklch(28% 0.10 152)", "oklch(40% 0.13 152)", "oklch(48% 0.14 152)", "oklch(54% 0.14 152)", "oklch(64% 0.13 152)", "oklch(78% 0.09 152)", "oklch(92% 0.04 152)"]
+      },
+      "accent-emerald-bright": {
+        "role": "primary",
+        "displayName": "Verdant Action Bright",
+        "canonical": "oklch(72% 0.18 152)",
+        "tonalRamp": ["oklch(28% 0.08 152)", "oklch(40% 0.12 152)", "oklch(52% 0.16 152)", "oklch(62% 0.18 152)", "oklch(72% 0.18 152)", "oklch(82% 0.14 152)", "oklch(90% 0.08 152)", "oklch(96% 0.04 152)"]
+      },
+      "tag-green-dark": {
+        "role": "secondary",
+        "displayName": "Sage Tag",
+        "canonical": "oklch(72% 0.18 145)",
+        "tonalRamp": ["oklch(28% 0.08 145)", "oklch(40% 0.12 145)", "oklch(52% 0.16 145)", "oklch(62% 0.18 145)", "oklch(72% 0.18 145)", "oklch(82% 0.14 145)", "oklch(90% 0.08 145)", "oklch(96% 0.04 145)"]
+      },
+      "tag-green-light": {
+        "role": "secondary",
+        "displayName": "Sage Tag Light",
+        "canonical": "oklch(80% 0.16 145)",
+        "tonalRamp": ["oklch(34% 0.08 145)", "oklch(46% 0.12 145)", "oklch(58% 0.15 145)", "oklch(68% 0.16 145)", "oklch(80% 0.16 145)", "oklch(88% 0.12 145)", "oklch(94% 0.07 145)", "oklch(98% 0.03 145)"]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Rail Gray",
+        "canonical": "oklch(45% 0.01 250)",
+        "tonalRamp": ["oklch(20% 0.005 250)", "oklch(28% 0.008 250)", "oklch(36% 0.01 250)", "oklch(45% 0.01 250)", "oklch(55% 0.01 250)", "oklch(68% 0.008 250)", "oklch(82% 0.005 250)", "oklch(94% 0.005 250)"]
+      },
+      "text-primary-dark": {
+        "role": "neutral",
+        "displayName": "Text Primary Dark",
+        "canonical": "oklch(96% 0.005 250)",
+        "tonalRamp": ["oklch(20% 0.005 250)", "oklch(34% 0.005 250)", "oklch(50% 0.005 250)", "oklch(65% 0.005 250)", "oklch(78% 0.005 250)", "oklch(88% 0.005 250)", "oklch(96% 0.005 250)", "oklch(99% 0.005 250)"]
+      },
+      "text-secondary-dark": {
+        "role": "neutral",
+        "displayName": "Text Secondary Dark",
+        "canonical": "oklch(85% 0.005 250)",
+        "tonalRamp": ["oklch(20% 0.005 250)", "oklch(32% 0.005 250)", "oklch(45% 0.005 250)", "oklch(60% 0.005 250)", "oklch(72% 0.005 250)", "oklch(85% 0.005 250)", "oklch(92% 0.005 250)", "oklch(98% 0.005 250)"]
+      },
+      "text-muted-dark": {
+        "role": "neutral",
+        "displayName": "Text Muted Dark",
+        "canonical": "oklch(65% 0.01 250)",
+        "tonalRamp": ["oklch(20% 0.005 250)", "oklch(32% 0.008 250)", "oklch(45% 0.01 250)", "oklch(55% 0.01 250)", "oklch(65% 0.01 250)", "oklch(78% 0.008 250)", "oklch(88% 0.005 250)", "oklch(96% 0.005 250)"]
+      },
+      "surface-card-dark": {
+        "role": "neutral",
+        "displayName": "Surface Card Dark",
+        "canonical": "oklch(28% 0.01 60)",
+        "tonalRamp": ["oklch(15% 0.008 60)", "oklch(22% 0.01 60)", "oklch(28% 0.01 60)", "oklch(38% 0.012 60)", "oklch(50% 0.012 60)", "oklch(64% 0.01 60)", "oklch(80% 0.008 60)", "oklch(94% 0.005 60)"]
+      },
+      "border-subtle-dark": {
+        "role": "neutral",
+        "displayName": "Subtle Border Dark",
+        "canonical": "oklch(38% 0.01 250)",
+        "tonalRamp": ["oklch(20% 0.005 250)", "oklch(28% 0.008 250)", "oklch(38% 0.01 250)", "oklch(50% 0.01 250)", "oklch(62% 0.01 250)", "oklch(76% 0.008 250)", "oklch(88% 0.005 250)", "oklch(96% 0.005 250)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Project page titles and sidebar identity. One per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings — About, Experience, Education, Projects." },
+      "title": { "displayName": "Title", "purpose": "Card headings — job titles, degree names, project names." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs in About, project descriptions, rich-text content." },
+      "meta": { "displayName": "Meta", "purpose": "Subtitles, dates, secondary labels." },
+      "label": { "displayName": "Label", "purpose": "Tag and category chips, micro-text only." }
+    },
+    "shadows": [
+      { "name": "state-soft", "value": "0 4px 12px oklch(0% 0 0 / 0.15)", "purpose": "Hover/focus shadow on buttons and project cards. Confirms interactivity." },
+      { "name": "featured-anchor", "value": "0 4px 12px rgba(0,0,0,0.3)", "purpose": "Single ambient shadow for the project page featured-image container. Do not propagate." }
+    ],
+    "motion": [
+      { "name": "ease-state", "value": "cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default easing for state transitions (hover, focus). Duration 200-300ms." },
+      { "name": "duration-state", "value": "200ms", "purpose": "Standard hover/focus transition duration." },
+      { "name": "duration-skeleton-pulse", "value": "Tailwind animate-pulse default", "purpose": "Loading skeleton shimmer. Honors motion-reduce." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Verdant Action CTA. Used for See Project, See All Experiences, Live Demo. The single conversion path.",
+      "html": "<button class=\"ds-btn-primary\">See Project</button>",
+      "css": ".ds-btn-primary { background: #059669; color: #ffffff; padding: 12px 24px; border: 1px solid #047857; border-radius: 8px; font-family: Inter, system-ui, sans-serif; font-size: 1rem; font-weight: 500; line-height: 1; cursor: pointer; transition: background 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-primary:hover { background: #047857; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); } .ds-btn-primary:focus-visible { outline: 2px solid #10b981; outline-offset: 2px; }"
+    },
+    {
+      "name": "Resume Download Button",
+      "kind": "button",
+      "refersTo": "button-resume",
+      "description": "Sidebar-only ink-on-paper invert button for the resume download. Compact density.",
+      "html": "<button class=\"ds-btn-resume\"><svg viewBox=\"0 0 384 512\" width=\"14\" height=\"14\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z\"/></svg>Resume</button>",
+      "css": ".ds-btn-resume { display: inline-flex; align-items: center; gap: 8px; background: #111111; color: #ffffff; padding: 4px 12px; border: 1px solid #ffffff; border-radius: 4px; font-family: Inter, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1), color 300ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-btn-resume:hover { background: #ffffff; color: #111111; } .ds-btn-resume:focus-visible { outline: 2px solid #10b981; outline-offset: 2px; }"
+    },
+    {
+      "name": "Tag Chip",
+      "kind": "chip",
+      "refersTo": "chip-tag",
+      "description": "Pill-shaped skill or technology tag. Sage Tag color in dark mode (low-alpha green fill, green text).",
+      "html": "<span class=\"ds-chip-tag\">Adobe Photoshop</span>",
+      "css": ".ds-chip-tag { display: inline-block; background: rgba(34, 197, 94, 0.3); color: #22c55e; padding: 6px 12px; border-radius: 9999px; font-family: Inter, system-ui, sans-serif; font-size: 0.75rem; font-weight: 500; line-height: 1; letter-spacing: 0.02em; }"
+    },
+    {
+      "name": "Category Chip",
+      "kind": "chip",
+      "refersTo": "chip-category",
+      "description": "Single-tone neutral chip labeling a project's category in the list view.",
+      "html": "<span class=\"ds-chip-category\">UI/UX Design</span>",
+      "css": ".ds-chip-category { display: inline-block; background: rgba(68, 64, 60, 0.5); color: #d1d5db; padding: 4px 12px; border-radius: 9999px; font-family: Inter, system-ui, sans-serif; font-size: 0.875rem; font-weight: 500; line-height: 1; }"
+    },
+    {
+      "name": "Project Image Card",
+      "kind": "card",
+      "refersTo": "card-project-image",
+      "description": "Neutral surface holding a project image with object-contain so artwork never crops. Should migrate to flat-at-rest per Flat-By-Default Rule.",
+      "html": "<div class=\"ds-card-project\"><img src=\"\" alt=\"Project image\" /></div>",
+      "css": ".ds-card-project { background: rgba(41, 37, 36, 0.5); border: 1px solid #374151; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 16px; transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-card-project:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); } .ds-card-project img { max-width: 100%; height: auto; object-fit: contain; }"
+    },
+    {
+      "name": "Timeline Item",
+      "kind": "custom",
+      "refersTo": "timeline-item",
+      "description": "Signature structural element. 2px vertical rail running full height of every Experience, Education, and Project entry. The editorial column-rule that ties the three list sections together.",
+      "html": "<article class=\"ds-timeline-item\"><h3>Job Title</h3><p>Company, Location</p><p>2024 - Present</p></article>",
+      "css": ".ds-timeline-item { position: relative; padding-left: 32px; color: #f3f4f6; font-family: Inter, system-ui, sans-serif; } .ds-timeline-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #4b5563; } .ds-timeline-item h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.3; margin: 0 0 4px; } .ds-timeline-item p { font-size: 1rem; line-height: 1.5; margin: 0 0 2px; color: #d1d5db; } .ds-timeline-item p:last-child { color: #9ca3af; font-size: 0.875rem; }"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Top-of-section heading. Marks the start of About, Experience, Education, Projects.",
+      "html": "<h2 class=\"ds-section-heading\">Projects</h2>",
+      "css": ".ds-section-heading { font-family: Inter, system-ui, sans-serif; font-size: 1.875rem; font-weight: 700; line-height: 1.2; letter-spacing: 0.01em; color: #f3f4f6; margin: 0 0 24px; }"
+    },
+    {
+      "name": "Back to Top",
+      "kind": "button",
+      "refersTo": "back-to-top",
+      "description": "Floating circular button revealed after scrolling past 400px. Currently glassmorphic — phase out per Anti-Glass Rule.",
+      "html": "<button class=\"ds-back-to-top\" aria-label=\"Back to top\"><svg viewBox=\"0 0 24 24\" width=\"14\" height=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M18 15l-6-6-6 6\"/></svg></button>",
+      "css": ".ds-back-to-top { position: fixed; bottom: 32px; right: 32px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; background: #1c1917; color: #9ca3af; border: 1px solid #374151; border-radius: 9999px; cursor: pointer; transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1), border-color 300ms cubic-bezier(0.4, 0, 0.2, 1); } .ds-back-to-top:hover { color: #f3f4f6; border-color: #4b5563; } .ds-back-to-top:focus-visible { outline: 2px solid #10b981; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Editorial Desk",
+    "overview": "The portfolio reads as a designed magazine spread, not a marketing page. The site UI is a frame around the work — restrained type, tight grid, generous spacing — and the work itself (logos, posters, video stills, UX prototypes) carries the color and personality. The brand is 'designer who codes,' so the chrome stays quiet on purpose: precision in hierarchy and rhythm earns trust where decoration would dilute it. Everything here is in service of a recruiter scanning for fit in under 60 seconds.",
+    "keyCharacteristics": [
+      "One restrained accent (emerald-600) for the primary action path; everything else is tinted neutral.",
+      "Flat surfaces by default. Shadows and depth only as response to state.",
+      "Inter as the single workhorse typeface; hierarchy via scale + weight, not font swaps.",
+      "Project imagery is the loud element. The frame around it never competes.",
+      "Dark mode is the default canvas; light mode is supported via prefers-color-scheme."
+    ],
+    "rules": [
+      { "name": "The One Voice Rule", "body": "Verdant Action is the only saturated color in the chrome. It appears on at most 10% of any given screen — the active CTA, nothing else. If a second accent is needed, push it onto the work itself, not the frame.", "section": "colors" },
+      { "name": "The No-Pure-Neutral Rule", "body": "Never use #000 or #fff literally. Tint every neutral toward warm graphite (chroma 0.005 in OKLCH is enough). The current Ink and Paper values are inherited from earlier code and should migrate to tinted equivalents on the next refactor.", "section": "colors" },
+      { "name": "The Gray Discipline Rule", "body": "Stick to one neutral family per surface. The codebase currently mixes Tailwind gray-*, stone-*, slate-*, and neutral-* interchangeably. Going forward: stone-* for warm surfaces, gray-* for cool text. Do not introduce slate-* or neutral-* for new work.", "section": "colors" },
+      { "name": "The One-Family Rule", "body": "Inter is the only typeface. No script, no serif, no display-only secondary face. Variation comes from weight (400 / 500 / 600 / 700) and scale, never from font swaps.", "section": "typography" },
+      { "name": "The Body-Font Bug Rule", "body": "app/globals.css currently declares font-family: Arial, Helvetica, sans-serif on body, which overrides the Inter next/font token. This is a bug. Fix the body declaration to use var(--font-inter-sans) or remove it entirely.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. Shadows appear only as a response to state (hover, focus). No resting shadow on cards, navigation, or chips.", "section": "elevation" },
+      { "name": "The Anti-Glass Rule", "body": "No backdrop-filter: blur on chrome surfaces. The current navbar and back-to-top button are exceptions inherited from earlier code; they should be solid (bg-stone-900 with full opacity) on the next pass.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Inter at five distinct scale steps (Display 36 / Headline 30 / Title 24 / Body 16 / Label 12) and rely on weight + scale for hierarchy.",
+      "Do keep the Verdant Action accent (#059669) on ≤10% of any screen. CTAs only.",
+      "Do preserve the timeline rail (before:w-0.5 before:bg-gray-600) as the single vertical structural element across Experience, Education, and Projects.",
+      "Do treat project imagery as the loud element. The frame around it stays calm.",
+      "Do honor prefers-reduced-motion on every transition or skeleton (motion-reduce:animate-none is already in use; keep the pattern).",
+      "Do maintain WCAG 2.1 AA contrast: 4.5:1 for body text, 3:1 for large text."
+    ],
+    "donts": [
+      "Don't use pure #000 or #fff. Tint every neutral toward warm graphite (PRODUCT.md anti-reference: bare HTML resume).",
+      "Don't add glassmorphism (backdrop-filter: blur) to new chrome. The existing navbar and back-to-top are exceptions to phase out, not patterns to extend (PRODUCT.md anti-reference: generic AI/SaaS landing).",
+      "Don't introduce slate-* or neutral-* Tailwind families for new work. Pick stone-* (warm) or gray-* (cool) and stay there.",
+      "Don't use scroll-jacking, custom cursors, or oversized motion. Restraint is the statement (PRODUCT.md anti-reference: Awwwards-trendy agency portfolio).",
+      "Don't introduce a second brand accent. If it isn't action, it isn't Verdant. Project imagery carries the rest of the color (PRODUCT.md anti-reference: Dribbble-style designer maximalism).",
+      "Don't add resting shadows to cards or surfaces. Flat at rest, shadow on state only.",
+      "Don't use border-left greater than 1px as a colored accent stripe (impeccable absolute ban). The 0.5px (w-0.5 = 2px) timeline rail is the ONE permitted vertical accent and it stays gray.",
+      "Don't use gradient text (background-clip: text). Solid colors only; emphasis via weight or size.",
+      "Don't reach for a modal as the first thought. Inline / progressive disclosure first."
+    ]
+  }
+}
