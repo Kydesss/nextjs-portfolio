@@ -1,8 +1,20 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --color-paper: oklch(0.985 0.003 155);
+    --color-bone: oklch(0.96 0.004 155);
+    --color-graphite: oklch(0.35 0.008 155);
+    --color-ink: oklch(0.18 0.006 155);
+    --color-rail: oklch(0.78 0.005 155);
+    --color-surface-card: oklch(0.97 0.004 155);
+    --color-accent: oklch(0.62 0.14 155);
+    --color-accent-deep: oklch(0.52 0.13 155);
+    --color-accent-bright: oklch(0.72 0.15 155);
+    --color-tag-bg: oklch(0.93 0.04 155);
+    --color-tag-text: oklch(0.34 0.10 155);
+
+    --background: var(--color-paper);
+    --foreground: var(--color-ink);
 }
 
 @theme inline {
@@ -14,32 +26,40 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #111111;
-        --foreground: #ededed;
+        --color-paper: oklch(0.18 0.006 155);
+        --color-bone: oklch(0.22 0.006 155);
+        --color-graphite: oklch(0.78 0.008 155);
+        --color-ink: oklch(0.94 0.004 155);
+        --color-rail: oklch(0.32 0.006 155);
+        --color-surface-card: oklch(0.24 0.006 155);
+        --color-tag-bg: oklch(0.30 0.06 155);
+        --color-tag-text: oklch(0.86 0.10 155);
     }
-    .ulist li {
-        color: var(--color-gray-500);
-    }
-    .ulist span {
-        color: var(--color-gray-300);
-    }
+}
 
-    .ulist h1 span,
-    .ulist h2 span,
-    .ulist h3 span {
-        color: var(--color-white);
-    }
-
-    .ulist a span {
-        color: var(--color-blue-500);
-    }
+.ulist li,
+.ulist span {
+    color: var(--color-graphite);
+}
+.ulist h1 span,
+.ulist h2 span,
+.ulist h3 span {
+    color: var(--color-ink);
+}
+.ulist a span {
+    color: var(--color-accent-deep);
 }
 
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0px;
+}
+
+*:focus-visible {
+    outline: 2px solid oklch(0.72 0.15 155);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .ulist li {

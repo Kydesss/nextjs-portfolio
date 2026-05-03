@@ -1,10 +1,13 @@
+import SectionHeading from "../components/SectionHeading";
+
 export default function About() {
     return (
         <section className="mb-8" id="about">
-            <h2 className="text-3xl font-bold mb-6 dark:text-gray-100 tracking-wide">
-                About Me
-            </h2>
-            <div className="space-y-4 dark:text-gray-300">
+            <SectionHeading>About Me</SectionHeading>
+            <div
+                style={{ color: "var(--color-graphite)" }}
+                className="space-y-4 max-w-[68ch] leading-relaxed"
+            >
                 <p>
                     I&apos;m a {new Date().getFullYear() - 2003}-year-old newly
                     graduated university student from the University of Toronto

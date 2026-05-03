@@ -11,11 +11,21 @@ export default function BackToTop() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    const scrollToTop = () => {
+        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+    };
+
     return (
         <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            onClick={scrollToTop}
             aria-label="Back to top"
-            className={`fixed bottom-8 right-8 z-50 flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-stone-900/80 backdrop-blur-sm text-gray-500 dark:text-gray-400 shadow-sm hover:border-gray-400 dark:hover:border-gray-400 hover:text-gray-800 dark:hover:text-gray-200 transition-all duration-300 ${
+            style={{
+                background: "var(--color-surface-card)",
+                color: "var(--color-graphite)",
+                border: "1px solid var(--color-rail)",
+            }}
+            className={`fixed bottom-8 right-8 z-50 flex items-center justify-center w-11 h-11 rounded-full transition-all duration-300 hover:[color:var(--color-ink)] ${
                 visible
                     ? "opacity-100 translate-y-0 pointer-events-auto"
                     : "opacity-0 translate-y-2 pointer-events-none"

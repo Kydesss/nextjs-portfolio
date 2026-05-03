@@ -1,9 +1,11 @@
 import Header from "./sections/Header";
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
-import ExperienceList from "./sections/Experience";
-import EducationList from "./sections/Education";
+import ExperienceSection from "./sections/Experience";
+import EducationSection from "./sections/Education";
 import ProjectsPage from "./projects/page";
+
+export const revalidate = 3600;
 
 export default function Home() {
     return (
@@ -15,8 +17,8 @@ export default function Home() {
                 <Navbar />
                 <main className="lg:pt-0 p-8 lg:p-12 lg:pr-[10%]">
                     <About />
-                    <ExperienceList />
-                    <EducationList />
+                    <ExperienceSection />
+                    <EducationSection />
                     <ProjectsPage />
                 </main>
             </div>

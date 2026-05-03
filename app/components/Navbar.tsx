@@ -11,12 +11,20 @@ export default function Navbar() {
     return (
         <div className="sticky w-full flex justify-center items-center top-0 z-10 h-24">
             <nav>
-                <ul className="flex items-center text-sm py-5 px-6 gap-6 dark:text-white bg-white/30 dark:bg-neutral-800/30 backdrop-blur-lg rounded-md">
+                <ul
+                    className="flex items-center text-sm py-4 px-6 gap-6 rounded-md"
+                    style={{
+                        background: "var(--color-surface-card)",
+                        color: "var(--color-ink)",
+                        border: "1px solid var(--color-bone)",
+                    }}
+                >
                     {NAV_LINKS.map(({ href, label }) => (
                         <li key={href}>
                             <Link
                                 href={href}
-                                className="hover:text-gray-500 transition ease-in"
+                                className="transition-colors duration-200"
+                                style={{ color: "var(--color-graphite)" }}
                             >
                                 {label}
                             </Link>
