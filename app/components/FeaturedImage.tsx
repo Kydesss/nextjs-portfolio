@@ -19,7 +19,13 @@ export default function FeaturedImage({
     const aspectRatio = width / height;
 
     return (
-        <div className="mb-6 w-full max-w-[1200px] mx-auto overflow-hidden border-gray-200 bg-gray-300/80 shadow-xl shadow-slate-300/20 dark:border-gray-700 dark:bg-slate-900/30 dark:shadow-black/20">
+        <div
+            style={{
+                background: "var(--color-bone)",
+                border: "1px solid var(--color-rail)",
+            }}
+            className="mb-6 w-full max-w-[1200px] mx-auto overflow-hidden rounded-lg"
+        >
             <div
                 className="relative w-full mx-auto"
                 style={{
